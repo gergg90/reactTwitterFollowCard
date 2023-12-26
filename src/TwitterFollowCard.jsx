@@ -33,4 +33,4 @@ function TwitterFollowCard({ children, userName, image, initialIsFollowing }) {
   );
 }
 
-export default TwitterFollowCard;
+export default TwitterFollowCard
