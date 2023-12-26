@@ -3,6 +3,8 @@ import { useState } from "react";
 function TwitterFollowCard({ children, userName, image, initialIsFollowing }) {
   const [isFollowing, setIsFollowing] = useState(initialIsFollowing);
 
+  
+
   const text = isFollowing ? "Siguiendo" : "Seguir";
   const buttomClassName = isFollowing
     ? "tw-followCard-button is-following"
@@ -23,7 +25,8 @@ function TwitterFollowCard({ children, userName, image, initialIsFollowing }) {
           className={buttomClassName}
           onClick={() => setIsFollowing(!isFollowing)}
         >
-          {text}
+          <span className='tw-followCard-text'>{text}</span>
+          <span className='tw-followCard-stopFollow'>Dejar de seguir</span>
         </button>
       </aside>
     </article>
